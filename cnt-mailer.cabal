@@ -1,0 +1,71 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           cnt-mailer
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/cnt-mailer#readme>
+homepage:       https://github.com/brhutchins/cnt-mailer#readme
+bug-reports:    https://github.com/brhutchins/cnt-mailer/issues
+author:         Barnaby Hutchins
+maintainer:     bhutchins@gmail.com
+copyright:      2021 Barnaby Hutchins
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/brhutchins/cnt-mailer
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_cnt_mailer
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , cmdargs
+    , mime-mail ==0.5.1
+    , smtp-mail
+    , text
+  default-language: Haskell2010
+
+executable cnt-mailer-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_cnt_mailer
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , cmdargs
+    , cnt-mailer
+    , mime-mail ==0.5.1
+    , smtp-mail
+    , text
+  default-language: Haskell2010
+
+test-suite cnt-mailer-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_cnt_mailer
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , cmdargs
+    , cnt-mailer
+    , mime-mail ==0.5.1
+    , smtp-mail
+    , text
+  default-language: Haskell2010

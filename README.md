@@ -1,6 +1,6 @@
 # cnt-mailer
 ## About
-Takes a (utf-8-encoded) plaintext file and an HTML file and sends them as a multipart email to a specified email address, via a specified SMTP server. We're using with *Centaurus: Journal of the European Society for the History of Science* to send out announcements.
+Takes a (utf-8-encoded) plaintext file and an HTML file and sends them as a multipart email to a specified email address, via a specified SMTP server. We're using it for *Centaurus: Journal of the European Society for the History of Science* to send out announcements.
 
 ### Why?
 In at least some academic disciplines (and quite probably other areas), the primary means of communicating with the entire community is via listserv-style mailing lists. If you want to make an announcement, say about the new issue of your journal, you send it to these lists.
